@@ -35,7 +35,7 @@
 <main>
   <p class="kicker">Afterglow</p>
   <h1>Privacy Policy</h1>
-  <p class="date">Effective July 29, 2026</p>
+  <p class="date">Effective August 18, 2026</p>
 
   <h2>The short version</h2>
   <p>Afterglow has no accounts and no tracking. Your photos, symptom logs, notes, and
@@ -53,7 +53,11 @@
   <ol>
     <li><strong>A photo you choose to send for an AI Photo Note.</strong> Only when you
     tap the consent button, only that one photo, with location metadata removed first.
-    It travels through our relay (which stores nothing) to OpenRouter, which routes it
+    The request also carries the procedure you logged, the recovery phase, and the day
+    number, so the note can be written against your timeline.
+    It travels through our relay (which holds the API key and keeps only an anonymous
+    per-install key from Apple's App Attest, used to block abuse — it stores no photos
+    and no recovery data) to OpenRouter, which routes it
     to OpenAI's API to write the note. We do not store your photo on any server.
     OpenRouter processes the request with prompt logging disabled for our account;
     OpenAI's API may retain inputs briefly for abuse monitoring under its API
@@ -66,9 +70,9 @@
   <p>Alongside the first of those, the app asks Apple to confirm it is a genuine copy of
   Afterglow on a real iPhone, and sends that confirmation to our relay with the photo.
   This is how we keep strangers from using the relay at our expense; it identifies the app
-  installation, not you, and it carries no personal data, no photo and nothing about your
-  recovery. It happens only inside a note you have already consented to. Apple describes
-  this as App Attest.</p>
+  installation, not you, and it carries no personal data and no photo. Our relay keeps
+  that per-install key so a device that abuses the service can be cut off. It happens only
+  inside a note you have already consented to. Apple describes this as App Attest.</p>
   <p>Purchases are processed by Apple; we never see your payment details.</p>
 
   <h2>Deleting your data</h2>
