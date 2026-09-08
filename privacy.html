@@ -35,7 +35,7 @@
 <main>
   <p class="kicker">Afterglow</p>
   <h1>Privacy Policy</h1>
-  <p class="date">Effective August 18, 2026</p>
+  <p class="date">Effective September 8, 2026</p>
 
   <h2>The short version</h2>
   <p>Afterglow has no accounts and no tracking. Your photos, symptom logs, notes, and
@@ -47,22 +47,22 @@
   There is no account, no cloud copy made by us, and no analytics or advertising
   software in the app.</p>
 
-  <h2>What can leave your phone</h2>
+      <h2>What can leave your phone</h2>
   <p>Exactly two kinds of network requests, and only one of them — a photo you
   explicitly choose to send — carries personal data:</p>
   <ol>
     <li><strong>A photo you choose to send for an AI Photo Note.</strong> Only when you
-    tap the consent button, only that one photo, with location metadata removed first.
+    confirm the consent screen, only that one photo, with location metadata removed first.
     The request also carries the procedure you logged, the recovery phase, and the day
     number, so the note can be written against your timeline.
     It travels through our relay (which holds the API key and keeps only an anonymous
-    per-install key from Apple's App Attest, used to block abuse — it stores no photos
-    and no recovery data) to OpenRouter, which routes it
-    to OpenAI's API to write the note. We do not store your photo on any server.
-    OpenRouter processes the request with prompt logging disabled for our account;
-    OpenAI's API may retain inputs briefly for abuse monitoring under its API
-    data-usage policy and does not train on API data. If you never tap the consent
-    button, no photo ever leaves your phone.</li>
+    per-install key from Apple's App Attest, used to block abuse — it retains no photo
+    or recovery data) to OpenRouter, which routes it to OpenAI's API to write the note.
+    OpenRouter does not retain prompt or response content for our account. OpenAI may
+    retain the request for up to 30 days for abuse monitoring, unless longer retention
+    is required by law or reasonably necessary to prevent harm. OpenRouter and OpenAI
+    do not use this API data to train their models. If you never confirm the consent
+    screen, no photo ever leaves your phone.</li>
     <li><strong>A feature-availability check.</strong> The app fetches one small public
     configuration file so we can switch the AI feature off remotely. The request
     carries no personal data.</li>
@@ -73,7 +73,13 @@
   installation, not you, and it carries no personal data and no photo. Our relay keeps
   that per-install key so a device that abuses the service can be cut off. It happens only
   inside a note you have already consented to. Apple describes this as App Attest.</p>
-  <p>Purchases are processed by Apple; we never see your payment details.</p>
+      <p>Purchases are processed by Apple; we never see your payment details.</p>
+
+      <h2>Face photos and face data</h2>
+      <p>Afterglow uses ordinary camera photos that you take for your private recovery journal. It does not use Apple's TrueDepth camera data, extract face geometry, create a biometric or face template, identify anyone, or perform face recognition.</p>
+      <p>The full-resolution originals stay in the app on your phone until you delete an individual photo, choose Settings → “Delete all my data,” or delete the app. We do not have a server copy of those originals.</p>
+      <p>If you confirm an AI Photo Note, Afterglow sends that one selected photo, with location metadata removed, plus the procedure you logged, recovery phase, and recovery day to our relay, OpenRouter, and OpenAI. Our relay passes the request through and retains no photo or recovery data. OpenRouter does not retain prompt or response content for our account. OpenAI may retain the request for up to 30 days for abuse monitoring, unless longer retention is required by law or reasonably necessary to prevent harm. OpenRouter and OpenAI do not use this API data to train their models.</p>
+      <p>After a request is sent, deleting the local photo or your Afterglow data cannot recall copies temporarily retained by a processor for security, legal, or abuse-monitoring purposes. We require each processor to provide the same or equivalent protection under its published API privacy and security commitments. You can use every non-AI journaling feature without sending a face photo.</p>
 
   <h2>Deleting your data</h2>
   <p>Settings → "Delete all my data" permanently removes everything from your phone.
